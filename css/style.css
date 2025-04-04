@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+}
+
+colours {
+  background-color: #000;
+  background-color: #fff;
+  background-color: #222;
+  background-color: #f8fafc;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 95%;
+  /* text-align: center; */
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 2.027rem;
+}
+h2 {
+  font-size: 1.802rem;
+}
+h3 {
+  font-size: 1.266rem;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+nav ul {
+  font-size: 1.2rem;
+  font-weight: 500;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  
+}
+
+ul li a,
+ul li a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+ul li a:hover,
+ul li a:target {
+  text-decoration: none;
+  color: #000;
+}
+
+
+#products-front {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+#products-front img:nth-child(1) {
+  grid-column: 1 / 4;
+  border-radius: 1.5%;
+}
+#products-front img:nth-child(2) {
+  grid-column: 1 / 2;
+  border-radius: 5%;
+}
+#products-front img:nth-child(3) {
+  grid-column: 2 / 3;
+  border-radius: 5%;
+}
+#products-front img:nth-child(4) {
+  grid-column: 3 / 4;
+  border-radius: 5%;
+}
+
+#front-blurb h1 {
+  font-weight: 500;
+}
+
+#front-blurb h3 {
+  margin-bottom: 0;
+}
+
+#front-blurb p {
+  margin-top: 0;
+}
+
+#front-blurb button {
+  background-color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+
+#front-blurb button a, 
+#front-blurb button a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+#front-blurb button a:hover,
+#front-blurb button a:target {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Ask about HTML Validation error to do with Button and a */
+
+#bhdthedogh {
+  background-color: lightblue;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+#bhdthedogh h1 {
+  text-align: center;
+}
+
+
+#section-reviews {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+#section-reviews h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#section-reviews #reviews .space-after {
+  padding-bottom: 50px;
+}
+
+
+#grid-other {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+#grid-other .prod {
+  background-color: lightblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prod img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* align-self: flex-start; */
+}
+
+.prod p, h2 {
+  text-align: center;
+  margin: auto;
+}
+
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 10px;
+  margin-top: 50px;
+}
