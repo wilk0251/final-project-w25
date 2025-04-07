@@ -15,9 +15,10 @@ body {
 }
 
 .wrapper {
-  max-width: 95%;
+  max-width: 1200px;
   /* text-align: center; */
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 30px;
 }
 
 img {
@@ -35,9 +36,13 @@ h3 {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+header img {
+  width: 30%;
 }
 
 nav ul {
@@ -45,8 +50,10 @@ nav ul {
   font-weight: 500;
   display: flex;
   list-style: none;
-  justify-content: space-between;
-  
+}
+
+nav ul li {
+  margin-left: 20px;
 }
 
 ul li a,
@@ -61,6 +68,12 @@ ul li a:target {
   color: #000;
 }
 
+/* section break */
+
+#front960 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
 #products-front {
   display: grid;
@@ -90,61 +103,71 @@ ul li a:target {
   font-weight: 500;
 }
 
-#front-blurb h3 {
+#front-blurb .limited {
   margin-bottom: 0;
+  font-weight: bold;
 }
 
 #front-blurb p {
   margin-top: 0;
 }
 
-#front-blurb button {
+.btn {
   background-color: #000;
   padding: 10px;
   border: none;
   border-radius: 4px;
 }
 
-
-#front-blurb button a, 
-#front-blurb button a:visited {
+.btn, 
+.btn:visited {
   color: #fff;
+  font-weight: bold;
   text-decoration: none;
 }
-#front-blurb button a:hover,
-#front-blurb button a:target {
+.btn:hover,
+.btn:target {
   color: #fff;
+  font-weight: bold;
   text-decoration: none;
 }
 
-/* Ask about HTML Validation error to do with Button and a */
+/* section break */
 
-#bhdthedogh {
-  background-color: lightblue;
-  margin-top: 20px;
-  padding: 20px;
+#bhthdo-s {
+  background-color: #f8fafc;
+  /* background-color: lightblue; */
+  margin-top: 40px;
+  padding: 30px 0;
 }
 
-#bhdthedogh h1 {
+#bhthdo-s h2 {
   text-align: center;
 }
 
+/* section break */
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 #section-reviews {
   background-color: #000;
   color: #fff;
-  padding: 20px;
 }
 
-#section-reviews h1 {
+#section-reviews h2 {
   margin-top: 0;
   text-align: center;
+  padding-top: 40px;
 }
 
-#section-reviews #reviews .space-after {
+#reviews .space-after {
   padding-bottom: 50px;
 }
 
+/* section break */
 
 #grid-other {
   display: grid;
@@ -154,6 +177,7 @@ ul li a:target {
 
 #grid-other .prod {
   background-color: lightblue;
+  background-color: #f8fafc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -163,20 +187,99 @@ ul li a:target {
 .prod img {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  /* align-self: flex-start; */
 }
 
-.prod p, h2 {
+.prod p, h2, h3 {
   text-align: center;
   margin: auto;
+  padding-bottom: 10px;
 }
 
+.prod h3 {
+  padding-top: 10px;
+}
+
+#products-other h2 {
+  padding: 20px;
+}
+
+/* section break */
 
 footer {
   background-color: #000;
   color: #fff;
   text-align: center;
-  font-size: 0.8rem;
-  padding: 10px;
+  padding: 5px;
   margin-top: 50px;
+}
+
+/* Media Queriy 768 */
+
+@media (min-width: 768px) {
+  #products-front {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #products-front img:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+  #products-front img:nth-child(2) {
+    grid-column: 2 / 3;
+  }
+  #products-front img:nth-child(3) {
+    grid-column: 1 / 2;
+  }
+  #products-front img:nth-child(4) {
+    grid-column: 2 / 3;
+  }
+
+
+  #bhthdo-p {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  #bhthdo-p p:nth-child(1) {
+    grid-column: 1 / 2;
+  }
+  #bhthdo-p p:nth-child(1) {
+    grid-column: 2 / 3;
+  }
+
+
+  #reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+
+  #grid-other {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Media Queriy 960 */
+
+@media (min-width: 960px) {
+  #front960 {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  #front-blurb {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  #products-front {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #front-blurb h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
